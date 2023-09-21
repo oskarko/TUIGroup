@@ -8,8 +8,8 @@
 //
 
 protocol CitiesSource {
-    func loadDepartureCities() -> [String]
-    func loadDestinationCities() -> [String]
+    func loadDepartureCities() async -> [String]
+    func loadDestinationCities() async -> [String]
 }
 
 /// The `CitiesCache` object manages the list of city names loaded from an external source.
@@ -23,24 +23,23 @@ class CitiesCache {
     }
     
     /// The list of departure city names.
-    var departureCities: [String] {
+    func getDepartureCities() async -> [String] {
         if let cities = cachedDepartureCities {
             return cities
         }
-        
-        let cities = source.loadDepartureCities()
+        let cities = await source.loadDepartureCities()
         cachedDepartureCities = cities
         
         return cities
     }
     
     /// The list of destination city names.
-    var destinationCities: [String] {
+    func getDestinationCities() async -> [String] {
         if let cities = cachedDestinationCities {
             return cities
         }
         
-        let cities = source.loadDestinationCities()
+        let cities = await source.loadDestinationCities()
         cachedDestinationCities = cities
         
         return cities
@@ -54,11 +53,11 @@ extension CitiesCache {
     
     /// Returns a list of city names filtered using given prefix.
     /// Lookup is a linear time operation.
-    func lookupDepartureCities(prefix: String) -> [String] {
-        departureCities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
+    func lookupDepartureCities(prefix: String) async -> [String] {
+        await getDepartureCities().filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
     }
     
-    func lookupDestinationCities(prefix: String) -> [String] {
-        destinationCities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
+    func lookupDestinationCities(prefix: String) async -> [String] {
+        await getDestinationCities().filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
     }
 }

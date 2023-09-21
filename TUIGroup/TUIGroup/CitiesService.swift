@@ -11,15 +11,17 @@ import Foundation
 
 struct CitiesService: CitiesSource {
     
-    let location: URL
+    let url: URL
     
-    init(location: URL) {
-        self.location = location
+    init(url: URL) {
+        self.url = url
     }
     
-    func loadDepartureCities() -> [String] {
+    func loadDepartureCities() async -> [String] {
         do {
-            let data = try Data(contentsOf: location)
+            let session = URLSession.shared
+            let (data, _) = try await session.data(from: url)
+            //let data = try Data(contentsOf: location)
             let connections = try JSONDecoder().decode(Connections.self, from: data)
             let departureCities = connections.connections.compactMap { $0.from }
             
@@ -31,15 +33,18 @@ struct CitiesService: CitiesSource {
         }
     }
     
-    func loadDestinationCities() -> [String] {
+    func loadDestinationCities() async -> [String] {
         do {
-            let data = try Data(contentsOf: location)
+            let session = URLSession.shared
+            let (data, _) = try await session.data(from: url)
+            //let data = try Data(contentsOf: location)
             let connections = try JSONDecoder().decode(Connections.self, from: data)
             let destinationCities = connections.connections.compactMap { $0.to }
             
             return NSOrderedSet(array: destinationCities).array as? [String] ?? [] // Avoid duplicated ones
         }
         catch {
+            print(error.localizedDescription)
             return []
         }
     }

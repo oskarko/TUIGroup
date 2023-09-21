@@ -32,7 +32,8 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
                     .onChange(of: departureCityInput) { newValue in
-                        autocomplete.autocomplete(departureCityInput)
+                        autocomplete.autocomplete(departureCityInput,
+                                                  flightType: .departure)
                     }
                 
             }
@@ -50,7 +51,8 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
                     .onChange(of: destinationCityInput) { newValue in
-                        autocomplete.autocomplete(destinationCityInput)
+                        autocomplete.autocomplete(destinationCityInput,
+                                                  flightType: .destination)
                     }
                 
             }
@@ -65,11 +67,16 @@ struct ContentView: View {
             
             List(autocomplete.suggestions, id: \.self) { suggestion in
                 ZStack {
-                    Text(suggestion)
+                    Text(suggestion.cityName)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .onTapGesture {
-                    departureCityInput = suggestion
+                    switch suggestion.flightType {
+                    case .departure:
+                        departureCityInput = suggestion.cityName
+                    case .destination:
+                        destinationCityInput = suggestion.cityName
+                    }
                 }
             }
         }

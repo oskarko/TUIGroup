@@ -9,20 +9,19 @@
 
 import Foundation
 
+@MainActor
 final class AutocompleteObject: ObservableObject {
     
-    let delay: TimeInterval = 0.3
+    @Published var suggestions: [Suggestion] = []
     
-    @Published var suggestions: [String] = []
+    private let citiesCache = CitiesCache(source: CitiesService(url: URL(string: "https://raw.githubusercontent.com/TuiMobilityHub/ios-code-challenge/master/connections.json")!))
     
-    init() {
-    }
-    
-    private let citiesCache = CitiesCache(source: CitiesService(location: URL(string: "https://raw.githubusercontent.com/TuiMobilityHub/ios-code-challenge/master/connections.json")!))
-    
+    private var flightType: FlightType = .departure
     private var task: Task<Void, Never>?
     
-    func autocomplete(_ text: String) {
+    init() {}
+    
+    func autocomplete(_ text: String, flightType: FlightType) {
         guard !text.isEmpty else {
             suggestions = []
             task?.cancel()
@@ -31,20 +30,25 @@ final class AutocompleteObject: ObservableObject {
         
         task?.cancel()
         
+        self.flightType = flightType
         task = Task {
-            await Task.sleep(UInt64(delay * 1_000_000_000.0))
-            
             guard !Task.isCancelled else {
                 return
             }
             
-            let newSuggestions = citiesCache.lookupDepartureCities(prefix: text)
+            var newSuggestions: [String] = []
+            switch self.flightType {
+            case .departure:
+                newSuggestions = await citiesCache.lookupDepartureCities(prefix: text)
+            case .destination:
+                newSuggestions = await citiesCache.lookupDestinationCities(prefix: text)
+            }
             
-            if isSingleSuggestion(suggestions, equalTo: text) {
+            if isSingleSuggestion(suggestions.compactMap{ $0.cityName }, equalTo: text) {
                 // Do not offer only one suggestion same as the input
                 suggestions = []
             } else {
-                suggestions = newSuggestions
+                suggestions = newSuggestions.compactMap{ Suggestion(cityName: $0, flightType: self.flightType) }
             }
         }
     }

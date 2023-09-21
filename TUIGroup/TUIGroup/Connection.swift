@@ -29,3 +29,13 @@ struct Coordinates: Codable {
     let lat: Double
     let long: Double
 }
+
+struct Suggestion: Hashable, Codable {
+    let cityName: String
+    let flightType: FlightType
+}
+
+enum FlightType: Codable {
+    case departure
+    case destination
+}
