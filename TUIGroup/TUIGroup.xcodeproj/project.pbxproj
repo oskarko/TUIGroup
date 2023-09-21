@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55E3818E2ABCBA7800F46ADB /* TUIGroupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3818D2ABCBA7800F46ADB /* TUIGroupApp.swift */; };
+		55E381902ABCBA7800F46ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3818F2ABCBA7800F46ADB /* ContentView.swift */; };
+		55E381922ABCBA7A00F46ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E381912ABCBA7A00F46ADB /* Assets.xcassets */; };
+		55E381952ABCBA7A00F46ADB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E381942ABCBA7A00F46ADB /* Preview Assets.xcassets */; };
+		55E3819F2ABCBA7A00F46ADB /* TUIGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3819E2ABCBA7A00F46ADB /* TUIGroupTests.swift */; };
+		55E381A92ABCBA7A00F46ADB /* TUIGroupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381A82ABCBA7A00F46ADB /* TUIGroupUITests.swift */; };
+		55E381AB2ABCBA7A00F46ADB /* TUIGroupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381AA2ABCBA7A00F46ADB /* TUIGroupUITestsLaunchTests.swift */; };
+		55E381B82ABCBBFF00F46ADB /* AutocompleteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */; };
+		55E381BA2ABCBC8A00F46ADB /* CitiesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */; };
+		55E381BC2ABCBCE500F46ADB /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */; };
+		55E381BE2ABCBD4300F46ADB /* CitiesFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */; };
+		55E381C02ABCBDB300F46ADB /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E381BF2ABCBDB300F46ADB /* cities.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55E3819B2ABCBA7A00F46ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55E381822ABCBA7800F46ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E381892ABCBA7800F46ADB;
+			remoteInfo = TUIGroup;
+		};
+		55E381A52ABCBA7A00F46ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55E381822ABCBA7800F46ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E381892ABCBA7800F46ADB;
+			remoteInfo = TUIGroup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55E3818A2ABCBA7800F46ADB /* TUIGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUIGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E3818D2ABCBA7800F46ADB /* TUIGroupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUIGroupApp.swift; sourceTree = "<group>"; };
+		55E3818F2ABCBA7800F46ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55E381912ABCBA7A00F46ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55E381942ABCBA7A00F46ADB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55E3819A2ABCBA7A00F46ADB /* TUIGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUIGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E3819E2ABCBA7A00F46ADB /* TUIGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUIGroupTests.swift; sourceTree = "<group>"; };
+		55E381A42ABCBA7A00F46ADB /* TUIGroupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUIGroupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E381A82ABCBA7A00F46ADB /* TUIGroupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUIGroupUITests.swift; sourceTree = "<group>"; };
+		55E381AA2ABCBA7A00F46ADB /* TUIGroupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUIGroupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteObject.swift; sourceTree = "<group>"; };
+		55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCache.swift; sourceTree = "<group>"; };
+		55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
+		55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesFile.swift; sourceTree = "<group>"; };
+		55E381BF2ABCBDB300F46ADB /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55E381872ABCBA7800F46ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381972ABCBA7A00F46ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381A12ABCBA7A00F46ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55E381812ABCBA7800F46ADB = {
+			isa = PBXGroup;
+			children = (
+				55E3818C2ABCBA7800F46ADB /* TUIGroup */,
+				55E3819D2ABCBA7A00F46ADB /* TUIGroupTests */,
+				55E381A72ABCBA7A00F46ADB /* TUIGroupUITests */,
+				55E3818B2ABCBA7800F46ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55E3818B2ABCBA7800F46ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55E3818A2ABCBA7800F46ADB /* TUIGroup.app */,
+				55E3819A2ABCBA7A00F46ADB /* TUIGroupTests.xctest */,
+				55E381A42ABCBA7A00F46ADB /* TUIGroupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55E3818C2ABCBA7800F46ADB /* TUIGroup */ = {
+			isa = PBXGroup;
+			children = (
+				55E3818D2ABCBA7800F46ADB /* TUIGroupApp.swift */,
+				55E3818F2ABCBA7800F46ADB /* ContentView.swift */,
+				55E381912ABCBA7A00F46ADB /* Assets.xcassets */,
+				55E381932ABCBA7A00F46ADB /* Preview Content */,
+				55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */,
+				55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */,
+				55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */,
+				55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */,
+				55E381BF2ABCBDB300F46ADB /* cities.txt */,
+			);
+			path = TUIGroup;
+			sourceTree = "<group>";
+		};
+		55E381932ABCBA7A00F46ADB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				55E381942ABCBA7A00F46ADB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55E3819D2ABCBA7A00F46ADB /* TUIGroupTests */ = {
+			isa = PBXGroup;
+			children = (
+				55E3819E2ABCBA7A00F46ADB /* TUIGroupTests.swift */,
+			);
+			path = TUIGroupTests;
+			sourceTree = "<group>";
+		};
+		55E381A72ABCBA7A00F46ADB /* TUIGroupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55E381A82ABCBA7A00F46ADB /* TUIGroupUITests.swift */,
+				55E381AA2ABCBA7A00F46ADB /* TUIGroupUITestsLaunchTests.swift */,
+			);
+			path = TUIGroupUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55E381892ABCBA7800F46ADB /* TUIGroup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E381AE2ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroup" */;
+			buildPhases = (
+				55E381862ABCBA7800F46ADB /* Sources */,
+				55E381872ABCBA7800F46ADB /* Frameworks */,
+				55E381882ABCBA7800F46ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUIGroup;
+			productName = TUIGroup;
+			productReference = 55E3818A2ABCBA7800F46ADB /* TUIGroup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55E381992ABCBA7A00F46ADB /* TUIGroupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E381B12ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroupTests" */;
+			buildPhases = (
+				55E381962ABCBA7A00F46ADB /* Sources */,
+				55E381972ABCBA7A00F46ADB /* Frameworks */,
+				55E381982ABCBA7A00F46ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55E3819C2ABCBA7A00F46ADB /* PBXTargetDependency */,
+			);
+			name = TUIGroupTests;
+			productName = TUIGroupTests;
+			productReference = 55E3819A2ABCBA7A00F46ADB /* TUIGroupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55E381A32ABCBA7A00F46ADB /* TUIGroupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E381B42ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroupUITests" */;
+			buildPhases = (
+				55E381A02ABCBA7A00F46ADB /* Sources */,
+				55E381A12ABCBA7A00F46ADB /* Frameworks */,
+				55E381A22ABCBA7A00F46ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55E381A62ABCBA7A00F46ADB /* PBXTargetDependency */,
+			);
+			name = TUIGroupUITests;
+			productName = TUIGroupUITests;
+			productReference = 55E381A42ABCBA7A00F46ADB /* TUIGroupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55E381822ABCBA7800F46ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					55E381892ABCBA7800F46ADB = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					55E381992ABCBA7A00F46ADB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 55E381892ABCBA7800F46ADB;
+					};
+					55E381A32ABCBA7A00F46ADB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 55E381892ABCBA7800F46ADB;
+					};
+				};
+			};
+			buildConfigurationList = 55E381852ABCBA7800F46ADB /* Build configuration list for PBXProject "TUIGroup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55E381812ABCBA7800F46ADB;
+			productRefGroup = 55E3818B2ABCBA7800F46ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55E381892ABCBA7800F46ADB /* TUIGroup */,
+				55E381992ABCBA7A00F46ADB /* TUIGroupTests */,
+				55E381A32ABCBA7A00F46ADB /* TUIGroupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55E381882ABCBA7800F46ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E381952ABCBA7A00F46ADB /* Preview Assets.xcassets in Resources */,
+				55E381922ABCBA7A00F46ADB /* Assets.xcassets in Resources */,
+				55E381C02ABCBDB300F46ADB /* cities.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381982ABCBA7A00F46ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381A22ABCBA7A00F46ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55E381862ABCBA7800F46ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E381BC2ABCBCE500F46ADB /* Strings+Extensions.swift in Sources */,
+				55E381902ABCBA7800F46ADB /* ContentView.swift in Sources */,
+				55E381BE2ABCBD4300F46ADB /* CitiesFile.swift in Sources */,
+				55E381BA2ABCBC8A00F46ADB /* CitiesCache.swift in Sources */,
+				55E3818E2ABCBA7800F46ADB /* TUIGroupApp.swift in Sources */,
+				55E381B82ABCBBFF00F46ADB /* AutocompleteObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381962ABCBA7A00F46ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E3819F2ABCBA7A00F46ADB /* TUIGroupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E381A02ABCBA7A00F46ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E381AB2ABCBA7A00F46ADB /* TUIGroupUITestsLaunchTests.swift in Sources */,
+				55E381A92ABCBA7A00F46ADB /* TUIGroupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55E3819C2ABCBA7A00F46ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55E381892ABCBA7800F46ADB /* TUIGroup */;
+			targetProxy = 55E3819B2ABCBA7A00F46ADB /* PBXContainerItemProxy */;
+		};
+		55E381A62ABCBA7A00F46ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55E381892ABCBA7800F46ADB /* TUIGroup */;
+			targetProxy = 55E381A52ABCBA7A00F46ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		55E381AC2ABCBA7A00F46ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55E381AD2ABCBA7A00F46ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55E381AF2ABCBA7A00F46ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TUIGroup/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55E381B02ABCBA7A00F46ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TUIGroup/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55E381B22ABCBA7A00F46ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUIGroup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TUIGroup";
+			};
+			name = Debug;
+		};
+		55E381B32ABCBA7A00F46ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUIGroup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TUIGroup";
+			};
+			name = Release;
+		};
+		55E381B52ABCBA7A00F46ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TUIGroup;
+			};
+			name = Debug;
+		};
+		55E381B62ABCBA7A00F46ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oscargarrucho.TUIGroupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TUIGroup;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55E381852ABCBA7800F46ADB /* Build configuration list for PBXProject "TUIGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E381AC2ABCBA7A00F46ADB /* Debug */,
+				55E381AD2ABCBA7A00F46ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55E381AE2ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E381AF2ABCBA7A00F46ADB /* Debug */,
+				55E381B02ABCBA7A00F46ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55E381B12ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E381B22ABCBA7A00F46ADB /* Debug */,
+				55E381B32ABCBA7A00F46ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55E381B42ABCBA7A00F46ADB /* Build configuration list for PBXNativeTarget "TUIGroupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E381B52ABCBA7A00F46ADB /* Debug */,
+				55E381B62ABCBA7A00F46ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55E381822ABCBA7800F46ADB /* Project object */;
+}
