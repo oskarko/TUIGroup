@@ -8,44 +8,57 @@
 //
 
 protocol CitiesSource {
-    func loadCities() -> [String]
+    func loadDepartureCities() -> [String]
+    func loadDestinationCities() -> [String]
 }
 
 /// The `CitiesCache` object manages the list of city names loaded from an external source.
 class CitiesCache {
-
+    
     /// Source to load city names.
     let source: CitiesSource
-
+    
     init(source: CitiesSource) {
         self.source = source
     }
-
-    /// The list of city names.
-    var cities: [String] {
-        if let cities = cachedCities {
+    
+    /// The list of departure city names.
+    var departureCities: [String] {
+        if let cities = cachedDepartureCities {
             return cities
         }
-
-        let cities = source.loadCities()
-        cachedCities = cities
-
+        
+        let cities = source.loadDepartureCities()
+        cachedDepartureCities = cities
+        
         return cities
     }
-
-    private var cachedCities: [String]?
+    
+    /// The list of destination city names.
+    var destinationCities: [String] {
+        if let cities = cachedDestinationCities {
+            return cities
+        }
+        
+        let cities = source.loadDestinationCities()
+        cachedDestinationCities = cities
+        
+        return cities
+    }
+    
+    private var cachedDepartureCities: [String]?
+    private var cachedDestinationCities: [String]?
 }
 
 extension CitiesCache {
-
+    
     /// Returns a list of city names filtered using given prefix.
-    ///
-    /// Lookup is case insensitive and diacritic insensitive:
-    ///     "ams" will return ["Amstelveen", "Amsterdam", "Amsterdam-Zuidoost", "Amstetten"]
-    ///     "krako" will return ["Kraków"]
-    ///
     /// Lookup is a linear time operation.
-    func lookup(prefix: String) -> [String] {
-        cities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
+    func lookupDepartureCities(prefix: String) -> [String] {
+        departureCities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
+    }
+    
+    func lookupDestinationCities(prefix: String) -> [String] {
+        destinationCities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
     }
 }

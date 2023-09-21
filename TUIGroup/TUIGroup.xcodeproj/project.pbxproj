@@ -17,8 +17,8 @@
 		55E381B82ABCBBFF00F46ADB /* AutocompleteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */; };
 		55E381BA2ABCBC8A00F46ADB /* CitiesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */; };
 		55E381BC2ABCBCE500F46ADB /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */; };
-		55E381BE2ABCBD4300F46ADB /* CitiesFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */; };
-		55E381C02ABCBDB300F46ADB /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E381BF2ABCBDB300F46ADB /* cities.txt */; };
+		55E381BE2ABCBD4300F46ADB /* CitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381BD2ABCBD4300F46ADB /* CitiesService.swift */; };
+		55E381C22ABCC32000F46ADB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E381C12ABCC32000F46ADB /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteObject.swift; sourceTree = "<group>"; };
 		55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCache.swift; sourceTree = "<group>"; };
 		55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
-		55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesFile.swift; sourceTree = "<group>"; };
-		55E381BF2ABCBDB300F46ADB /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
+		55E381BD2ABCBD4300F46ADB /* CitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesService.swift; sourceTree = "<group>"; };
+		55E381C12ABCC32000F46ADB /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 				55E381B72ABCBBFF00F46ADB /* AutocompleteObject.swift */,
 				55E381B92ABCBC8A00F46ADB /* CitiesCache.swift */,
 				55E381BB2ABCBCE500F46ADB /* Strings+Extensions.swift */,
-				55E381BD2ABCBD4300F46ADB /* CitiesFile.swift */,
-				55E381BF2ABCBDB300F46ADB /* cities.txt */,
+				55E381BD2ABCBD4300F46ADB /* CitiesService.swift */,
+				55E381C12ABCC32000F46ADB /* Connection.swift */,
 			);
 			path = TUIGroup;
 			sourceTree = "<group>";
@@ -248,7 +248,6 @@
 			files = (
 				55E381952ABCBA7A00F46ADB /* Preview Assets.xcassets in Resources */,
 				55E381922ABCBA7A00F46ADB /* Assets.xcassets in Resources */,
-				55E381C02ABCBDB300F46ADB /* cities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +274,11 @@
 			files = (
 				55E381BC2ABCBCE500F46ADB /* Strings+Extensions.swift in Sources */,
 				55E381902ABCBA7800F46ADB /* ContentView.swift in Sources */,
-				55E381BE2ABCBD4300F46ADB /* CitiesFile.swift in Sources */,
+				55E381BE2ABCBD4300F46ADB /* CitiesService.swift in Sources */,
 				55E381BA2ABCBC8A00F46ADB /* CitiesCache.swift in Sources */,
 				55E3818E2ABCBA7800F46ADB /* TUIGroupApp.swift in Sources */,
 				55E381B82ABCBBFF00F46ADB /* AutocompleteObject.swift in Sources */,
+				55E381C22ABCC32000F46ADB /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
