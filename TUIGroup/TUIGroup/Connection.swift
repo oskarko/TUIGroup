@@ -18,6 +18,13 @@ struct Connection: Codable {
     let to: String
     let coordinates: BothCoordinates
     let price: Int
+    
+    func printObject() {
+        print("From: \(from )")
+        print("To: \(to )")
+        print("Price: \(price)")
+        print("==============================")
+    }
 }
 
 struct BothCoordinates: Codable {
@@ -33,9 +40,4 @@ struct Coordinates: Codable {
 struct Suggestion: Hashable, Codable {
     let cityName: String
     let flightType: FlightType
-}
-
-enum FlightType: Codable {
-    case departure
-    case destination
 }

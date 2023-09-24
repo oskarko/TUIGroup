@@ -11,11 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    /// Autocompletion for the input text
-    @ObservedObject private var autocomplete = AutocompleteObject()
-    
-    @State var departureCityInput: String = ""
-    @State var destinationCityInput: String = ""
+    @ObservedObject private var viewModel = ContentViewModel()
     
     var body: some View {
         VStack {
@@ -28,12 +24,12 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding()
-                TextField("", text: $departureCityInput)
+                TextField("", text: $viewModel.departureCityInput)
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
-                    .onChange(of: departureCityInput) { newValue in
-                        autocomplete.autocomplete(departureCityInput,
-                                                  flightType: .departure)
+                    .onChange(of: viewModel.departureCityInput) { newValue in
+                        viewModel.autocomplete(newValue,
+                                               flightType: .departure)
                     }
                 
             }
@@ -47,36 +43,32 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding()
-                TextField("", text: $destinationCityInput)
+                TextField("", text: $viewModel.destinationCityInput)
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal)
-                    .onChange(of: destinationCityInput) { newValue in
-                        autocomplete.autocomplete(destinationCityInput,
-                                                  flightType: .destination)
+                    .onChange(of: viewModel.destinationCityInput) { newValue in
+                        viewModel.autocomplete(newValue,
+                                               flightType: .destination)
                     }
                 
             }
             
             HStack {
                 Text("Total price: ")
-                Text("120")
+                Text(viewModel.cheapestPrice)
                     .bold()
                 Spacer()
             }
             .padding()
             
-            List(autocomplete.suggestions, id: \.self) { suggestion in
+            List(viewModel.suggestions, id: \.self) { suggestion in
                 ZStack {
                     Text(suggestion.cityName)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .onTapGesture {
-                    switch suggestion.flightType {
-                    case .departure:
-                        departureCityInput = suggestion.cityName
-                    case .destination:
-                        destinationCityInput = suggestion.cityName
-                    }
+                    viewModel.sendAction(.selectCity, cityName: suggestion.cityName)
+                    viewModel.sendAction(.calcCheapestRoute)
                 }
             }
         }

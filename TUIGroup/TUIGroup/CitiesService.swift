@@ -9,12 +9,32 @@
 
 import Foundation
 
-struct CitiesService: CitiesSource {
+protocol CitiesProtocol {
+    func loadConnections() async -> Connections?
+    func loadDepartureCities() async -> [String]
+    func loadDestinationCities() async -> [String]
+}
+
+struct CitiesService: CitiesProtocol {
     
     let url: URL
     
     init(url: URL) {
         self.url = url
+    }
+    
+    func loadConnections() async -> Connections? {
+        do {
+            let session = URLSession.shared
+            let (data, _) = try await session.data(from: url)
+            let connections = try JSONDecoder().decode(Connections.self, from: data)
+            
+            return connections
+        }
+        catch {
+            print(error.localizedDescription)
+            return nil
+        }
     }
     
     func loadDepartureCities() async -> [String] {
