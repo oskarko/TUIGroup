@@ -55,6 +55,7 @@ struct TUITexflied: View {
             .onChange(of: input) { newValue in
                 onChange(newValue, flightType)
             }
+            .accessibilityIdentifier(flightType.titleString)
             
             if isEditing {
                 VStack {
@@ -65,6 +66,7 @@ struct TUITexflied: View {
                                 .foregroundColor(.white)
                                 .disabled(true)
                                 .padding(4)
+                                .accessibilityIdentifier(suggestion.cityName)
                             Spacer()
                             
                         }

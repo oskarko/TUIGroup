@@ -42,6 +42,7 @@ struct ContentView: View {
                 Text("Total price: ")
                 Text(viewModel.cheapestPrice)
                     .bold()
+                    .accessibilityIdentifier("Price")
                 Spacer()
             }
             .padding()
