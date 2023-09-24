@@ -46,6 +46,7 @@ final class ContentViewModel: ObservableObject {
     
     private func loadConnections() async {
         connections = await source.loadConnections()?.connections
+        print("connections count ", connections?.count ?? -1)
     }
     
     func sendAction(_ action: Action, cityName: String? = nil, flightType: FlightType? = .departure) {

@@ -14,6 +14,8 @@
 		5550B8082AC0A82F00D7AA67 /* FlightType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550B8072AC0A82F00D7AA67 /* FlightType.swift */; };
 		5550B80A2AC0A85400D7AA67 /* AnnotatedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550B8092AC0A85400D7AA67 /* AnnotatedItem.swift */; };
 		5550B80C2AC0A8E400D7AA67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550B80B2AC0A8E400D7AA67 /* Constants.swift */; };
+		5550B80E2AC0AD4F00D7AA67 /* ContentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550B80D2AC0AD4F00D7AA67 /* ContentViewModelTests.swift */; };
+		5550B8132AC0D27900D7AA67 /* CitiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550B8102AC0AE6300D7AA67 /* CitiServiceMock.swift */; };
 		55E3818E2ABCBA7800F46ADB /* TUIGroupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3818D2ABCBA7800F46ADB /* TUIGroupApp.swift */; };
 		55E381902ABCBA7800F46ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3818F2ABCBA7800F46ADB /* ContentView.swift */; };
 		55E381922ABCBA7A00F46ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E381912ABCBA7A00F46ADB /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		5550B8072AC0A82F00D7AA67 /* FlightType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightType.swift; sourceTree = "<group>"; };
 		5550B8092AC0A85400D7AA67 /* AnnotatedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedItem.swift; sourceTree = "<group>"; };
 		5550B80B2AC0A8E400D7AA67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5550B80D2AC0AD4F00D7AA67 /* ContentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelTests.swift; sourceTree = "<group>"; };
+		5550B8102AC0AE6300D7AA67 /* CitiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiServiceMock.swift; sourceTree = "<group>"; };
 		55E3818A2ABCBA7800F46ADB /* TUIGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUIGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E3818D2ABCBA7800F46ADB /* TUIGroupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUIGroupApp.swift; sourceTree = "<group>"; };
 		55E3818F2ABCBA7800F46ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,6 +194,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5550B80F2AC0AE5400D7AA67 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5550B8102AC0AE6300D7AA67 /* CitiServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		55E381812ABCBA7800F46ADB = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +246,9 @@
 		55E3819D2ABCBA7A00F46ADB /* TUIGroupTests */ = {
 			isa = PBXGroup;
 			children = (
+				5550B80F2AC0AE5400D7AA67 /* Mock */,
 				55E3819E2ABCBA7A00F46ADB /* TUIGroupTests.swift */,
+				5550B80D2AC0AD4F00D7AA67 /* ContentViewModelTests.swift */,
 			);
 			path = TUIGroupTests;
 			sourceTree = "<group>";
@@ -398,6 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5550B8132AC0D27900D7AA67 /* CitiServiceMock.swift in Sources */,
+				5550B80E2AC0AD4F00D7AA67 /* ContentViewModelTests.swift in Sources */,
 				55E3819F2ABCBA7A00F46ADB /* TUIGroupTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

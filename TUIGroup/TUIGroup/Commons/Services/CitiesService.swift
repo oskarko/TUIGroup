@@ -13,7 +13,7 @@ protocol CitiesProtocol {
     func loadConnections() async -> Connections?
 }
 
-struct CitiesService: CitiesProtocol {
+final class CitiesService: CitiesProtocol {
     
     let url: URL?
     
