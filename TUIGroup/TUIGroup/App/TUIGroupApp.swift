@@ -13,7 +13,16 @@ import SwiftUI
 struct TUIGroupApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    ContentView()
+                }
+            } else {
+                // Fallback on earlier versions
+                NavigationView {
+                    ContentView()
+                }
+            }
         }
     }
 }
