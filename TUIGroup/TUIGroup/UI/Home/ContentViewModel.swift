@@ -63,6 +63,7 @@ final class ContentViewModel: ObservableObject {
 
 private extension ContentViewModel {
     
+    // Check for cities to fill the autocomplete textfield options
     func autocomplete(_ text: String?, flightType: FlightType?) {
         guard
             let flightType = flightType,
@@ -112,8 +113,10 @@ private extension ContentViewModel {
 
     }
     
+    // Calculate if any route is possible (with or without stops)
+    // and update properties for the UI
     func calculateConnections(from: String, blackList: [String], selectedConnections: [Connection]) {
-        guard blackList.count < 9 else {
+        guard blackList.count < 9 else { // max stops allowed for one trip
             return
         }
         
@@ -168,17 +171,19 @@ private extension ContentViewModel {
         }
     }
     
+    // Check and return cities which contain the prefix string
     func lookupCities(prefix: String) -> [String] {
         guard let connections = connections else {
             return []
         }
         
-        let departureCities = connections.compactMap { self.flightType == .departure ? $0.from : $0.to }
-        let uniqueCities = NSOrderedSet(array: departureCities).array as? [String] ?? [] // Avoid duplicated ones
+        let cities = connections.compactMap { self.flightType == .departure ? $0.from : $0.to }
+        let uniqueCities = NSOrderedSet(array: cities).array as? [String] ?? [] // Avoid duplicated ones
         
         return uniqueCities.filter { $0.hasCaseAndDiacriticInsensitivePrefix(prefix) }
     }
     
+    // Get coordinates for all the connections/cities from the selected trip
     func getMapCoordinate(from connections: [Connection]) -> [MapCoordinate] {
         var coordinates = connections.compactMap{
             MapCoordinate(coordinates: .init(latitude: $0.coordinates.from.lat,
