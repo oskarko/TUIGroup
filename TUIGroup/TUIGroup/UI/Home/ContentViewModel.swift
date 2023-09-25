@@ -46,13 +46,16 @@ final class ContentViewModel: ObservableObject {
     
     private func loadConnections() async {
         connections = await source.loadConnections()?.connections
-        print("connections count ", connections?.count ?? -1)
     }
     
     func sendAction(_ action: Action, cityName: String? = nil, flightType: FlightType? = .departure) {
+        if let flightType = flightType {
+            self.flightType = flightType
+        }
+        
         switch action {
         case .autocomplete:
-            autocomplete(cityName, flightType: flightType)
+            autocomplete(cityName)
         case .calcCheapestRoute:
             calculateCheapestRoute()
         case .selectCity:
@@ -65,9 +68,8 @@ final class ContentViewModel: ObservableObject {
 private extension ContentViewModel {
     
     // Check for cities to fill the autocomplete textfield options
-    func autocomplete(_ text: String?, flightType: FlightType?) {
+    func autocomplete(_ text: String?) {
         guard
-            let flightType = flightType,
             let text = text, !text.isEmpty
         else {
             suggestions = []
@@ -77,7 +79,6 @@ private extension ContentViewModel {
         
         task?.cancel()
         
-        self.flightType = flightType
         task = Task {
             guard !Task.isCancelled else {
                 return
@@ -166,6 +167,7 @@ private extension ContentViewModel {
         guard let cityName = cityName else {
             return
         }
+        
         switch flightType {
         case .departure: departureCityInput = cityName
         case .destination: destinationCityInput = cityName

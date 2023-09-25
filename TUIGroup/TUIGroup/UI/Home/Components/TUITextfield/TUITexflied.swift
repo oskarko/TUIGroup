@@ -15,7 +15,7 @@ struct TUITexflied: View {
     @Binding private var input: String
     @Binding private var suggestions: [Suggestion]
     private let onChange: (String, FlightType) -> Void
-    private let onSelect: (String) -> Void
+    private let onSelect: (String, FlightType) -> Void
     @State private var isEditing: Bool = false
     @FocusState private var isFocused: Bool
     
@@ -24,7 +24,7 @@ struct TUITexflied: View {
         suggestions: Binding<[Suggestion]>,
         flightType: FlightType,
         onChange: @escaping (String, FlightType) -> Void,
-        onSelect: @escaping (String) -> Void
+        onSelect: @escaping (String, FlightType) -> Void
     ) {
         self._input = input
         self._suggestions = suggestions
@@ -50,7 +50,7 @@ struct TUITexflied: View {
             .padding(.horizontal)
             .focused($isFocused)
             .onSubmit { // <--- only on pressing the return key
-                onSelect(input)
+                onSelect(input, flightType)
             }
             .onChange(of: input) { newValue in
                 onChange(newValue, flightType)
@@ -74,7 +74,7 @@ struct TUITexflied: View {
                         .onTapGesture {
                             input = suggestion.cityName
                             isFocused = false
-                            onSelect(suggestion.cityName)
+                            onSelect(suggestion.cityName, flightType)
                         }
                     }
                 }
@@ -96,6 +96,6 @@ struct TUITexflied_Previews: PreviewProvider {
                     suggestions: $suggestions,
                     flightType: .departure,
                     onChange:  { _, _ in },
-                    onSelect:  { _ in })
+                    onSelect:  { _, _ in })
     }
 }

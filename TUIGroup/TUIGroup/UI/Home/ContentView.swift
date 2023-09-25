@@ -7,7 +7,6 @@
 //  Copyright © 2023 Oscar Rodriguez Garrucho. All rights reserved.
 //
 
-import MapKit
 import SwiftUI
 
 struct ContentView: View {
@@ -22,8 +21,8 @@ struct ContentView: View {
                         onChange: { newValue, flightType in
                 viewModel.sendAction(.autocomplete, cityName: newValue, flightType: flightType)
             },
-                        onSelect: { cityName in
-                viewModel.sendAction(.selectCity, cityName: cityName)
+                        onSelect: { cityName, flightType in
+                viewModel.sendAction(.selectCity, cityName: cityName, flightType: flightType)
                 viewModel.sendAction(.calcCheapestRoute)
             })
             
@@ -33,8 +32,8 @@ struct ContentView: View {
                         onChange: { newValue, flightType in
                 viewModel.sendAction(.autocomplete, cityName: newValue, flightType: flightType)
             },
-                        onSelect: { cityName in
-                viewModel.sendAction(.selectCity, cityName: cityName)
+                        onSelect: { cityName, flightType in
+                viewModel.sendAction(.selectCity, cityName: cityName, flightType: flightType)
                 viewModel.sendAction(.calcCheapestRoute)
             })
             

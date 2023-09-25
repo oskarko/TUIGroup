@@ -7,7 +7,6 @@
 //  Copyright © 2023 Oscar Rodriguez Garrucho. All rights reserved.
 //
 
-import Contacts
 import Foundation
 import MapKit
 import SwiftUI
